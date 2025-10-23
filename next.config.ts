@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    domains: ["chromestars.live"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "chromestars.live",
+        pathname: "/file/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
