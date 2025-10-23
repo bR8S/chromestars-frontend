@@ -20,8 +20,11 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: monospace;
   font-size: 16px;
+  background-image: radial-gradient(ellipse farthest-corner at -40% 45%, rgb(59 59 59 / 85%), hsl(242deg 10.48% 30.78%), rgb(35 35 35 / 93%)), linear-gradient(97deg, rgb(64 73 193 / 90%) 0%, rgb(10 15 35 / 90%) 5%);
+  font-family: monospace !important;
+  margin: 0;
+  min-height: 100vh;
 }
