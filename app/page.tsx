@@ -8,8 +8,8 @@ export default async function Home() {
   console.log('Log in component' + users)
 
   return (
-    <div>
-      <h1>LEADERBOARD</h1>
+    <div className="px-8 py-8">
+      <h1 className="text-3xl font-bold mb-8">LEADERBOARD</h1>
       <Leaderboard users={users}/> {/* component interface must be defined with props that are being passed down into the component*/}
     </div>
   );
