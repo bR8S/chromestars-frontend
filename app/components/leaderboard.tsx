@@ -1,8 +1,6 @@
 import { User } from "@/lib/types/user";
 import Image from "next/image"
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
-
 interface LeaderboardProps {
   users: User[];
 }

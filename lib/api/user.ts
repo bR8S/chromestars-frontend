@@ -15,3 +15,16 @@ export async function getUsers() {
 
   return data.users
 }
+
+export async function getUser(username: string) {
+  const res = await fetch(`${API_BASE}/racer/${username}`)
+
+  if (!res.ok) {
+    const errorData = await res.json()
+    throw new Error(errorData.message || "Unknown server error")
+  }
+
+  const data = await res.json()
+
+  return data.user
+}
