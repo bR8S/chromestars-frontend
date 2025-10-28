@@ -36,7 +36,7 @@ export default async function({ params }: any){
             </div>
 
             <div className="flex flex-row px-[32px] gap-8 mt-8">
-                <div className="w-[260px]">
+                <div className="w-[260px] p-6 rounded-xl border border-[#ffffff38] bg-[#ffffff0c]">
                     <h3 className="font-bold text-xl mb-2">ACHIEVEMENTS</h3>
                     <div className="">
                         <p>* COMING SOON ...</p>
@@ -54,7 +54,7 @@ export default async function({ params }: any){
                     <p className="w-full flex justify-between">AVERAGE POSITION: <span>{}</span></p>
                 </div>
                 <div className="pl-8">
-                    <div className="">
+                    <div className="p-6 rounded-xl border border-[#ffffff38] bg-[#ffffff0c]">
                         <h4 className="font-bold text-xl mb-2">BEST TRACKS</h4>
                         <ol>
                             {user.top_tracks?.map(track => (
@@ -62,7 +62,7 @@ export default async function({ params }: any){
                             ))}
                         </ol>
                     </div>
-                    <div className="">
+                    <div className="p-6 rounded-xl border border-[#ffffff38] bg-[#ffffff0c]">
                         <h4 className="font-bold text-xl mb-2">ALL TIME RIVALS</h4>
                         <ol>
                             {user.top_rivals?.map(rival => (
