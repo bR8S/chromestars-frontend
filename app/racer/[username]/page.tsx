@@ -43,17 +43,17 @@ export default async function({ params }: any){
                     </div>
                 </div>
 
-                <div className="w-1/2">
-                    <h3 className="font-bold text-xl mb-2">STATISTICS</h3>
-                    <p className="">TOTAL NUMBER OF RACES: <span>{user.competitions}</span></p>
-                    <p className="">TOTAL NUMBER OF WINS: <span>{user.wins}</span></p>
-                    <p className="">TOTAL NUMBER OF LOSSES: <span>{user.losses}</span></p>
-                    <p className="">TOTAL NUMBER OF PODIUM FINISHES: <span>{user.podium_count}</span></p>
-                    <p className="">BEST WIN STREAK: <span>{user.streak}</span></p>
-                    <p className="">OVERALL W/L RATIO: <span>{}</span></p>
-                    <p className="">AVERAGE POSITION: <span>{}</span></p>
+                <div className="w-1/2 flex flex-col gap-2 p-6 rounded-xl border border-[#ffffff38] bg-[#ffffff0c]">
+                    <h3 className="font-bold text-xl mb-1">STATISTICS</h3>
+                    <p className="w-full flex justify-between">TOTAL NUMBER OF RACES: <span>{user.competitions}</span></p>
+                    <p className="w-full flex justify-between">TOTAL NUMBER OF WINS: <span>{user.wins}</span></p>
+                    <p className="w-full flex justify-between">TOTAL NUMBER OF LOSSES: <span>{user.losses}</span></p>
+                    <p className="w-full flex justify-between">TOTAL NUMBER OF PODIUM FINISHES: <span>{user.podium_count}</span></p>
+                    <p className="w-full flex justify-between">BEST WIN STREAK: <span>{user.streak}</span></p>
+                    <p className="w-full flex justify-between">OVERALL W/L RATIO: <span>{}</span></p>
+                    <p className="w-full flex justify-between">AVERAGE POSITION: <span>{}</span></p>
                 </div>
-                <div className="">
+                <div className="pl-8">
                     <div className="">
                         <h4 className="font-bold text-xl mb-2">BEST TRACKS</h4>
                         <ol>
