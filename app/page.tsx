@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as userApi from "../lib/api/user"
 import { User } from "../lib/types/user"
-import Leaderboard from "./components/leaderboard"
+import Leaderboard from "./components/Leaderboard"
 
 export default async function Home() {
   const users: User[] = await userApi.getUsers()

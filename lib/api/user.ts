@@ -1,6 +1,6 @@
 import { User } from "../types/user";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000"
 
 // Get all users
 export async function getUsers() {
