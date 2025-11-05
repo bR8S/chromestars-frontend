@@ -28,3 +28,26 @@ export async function getUser(username: string) {
 
   return data.user
 }
+
+export async function getMe(token?: string) {
+  if (!token) {
+    throw new Error("No authentication token found")
+  }
+  console.log('Token found:', token)
+  
+  const res = await fetch(`${API_BASE}/users/me`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+
+  if (!res.ok) {
+    const errorData = await res.json()
+    throw new Error(errorData.message || "Unknown server error")
+  }
+
+  const data = await res.json()
+
+  return data.user
+}

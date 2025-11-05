@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./globals/nav"
 import Overlay from "./globals/overlay"
+import Stars from "./globals/stars"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Overlay />
+        <Stars />
         <Nav />
         {children}
       </body>

@@ -34,6 +34,26 @@ input, textarea, select {
   border: 1px solid #ffffff38;
   background-color: #ffffff0c;
   padding: 8px 16px;
+  transition: all 0.15s ease;
+}
+
+input:hover, textarea:hover, select:hover {
+  border-color: #ffffff70;
+  background-color: #ffffff14;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #ffffff70;
+  background-color: #ffffff14;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ffffff70;
+}
+
+input[type="file"] {
+  padding: 0;
 }
 
 .button {
@@ -44,9 +64,149 @@ input, textarea, select {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  transition: all 0.15s ease;
 }
 
 .button:hover {
   background-color: #ffffff14;
   cursor: pointer;
+  border-color: #ffffff70;
+}
+
+.cls-1 {
+    fill: none;
+    stroke:#fff;
+    stroke-linecap: round;
+    stroke-linejoin:round;
+    stroke-width:2px;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+.intro-big-star {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    left: 34.5%;
+    top: 50%;
+    transform: rotate(11.592deg) translate(-50%, -50%);
+    animation: bigstar 45s infinite;
+    filter: blur(6px);
+}
+.intro-little-star {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 47.5%;
+    top: 65%;
+    scale: 0.93;
+    transform: rotate(66.635deg) translate(-50%, -50%);
+    animation: smallstar 48s infinite;
+    filter: blur(6px);
+}
+.background {
+    filter: blur(13px) grayscale(0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.75;
+}
+.large-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    left: -2%;
+    top: 101%;
+    transform: rotate(11.592deg) translate(-50%, -50%);
+    animation: bigstar 45s infinite;
+    filter: blur(3px);
+}
+.big-star {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    left: 34.5%;
+    top: 50%;
+    transform: rotate(11.592deg) translate(-50%, -50%);
+    animation: bigstar 45s infinite;
+    filter: blur(6px);
+    display: none;
+}
+.mid-star {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    left: 94.5%;
+    top: 102%;
+    transform: rotate(11.592deg) translate(-50%, -50%);
+    animation: bigstar 45s infinite;
+    filter: blur(6px);
+}
+.small-star {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 67.5%;
+    top: 45%;
+    scale: 0.93;
+    transform: rotate(66.635deg) translate(-50%, -50%);
+    animation: smallstar 48s infinite;
+    filter: blur(3px);
+}
+@keyframes bigstar {
+    0% {
+        scale: 1;
+        transform: rotate(11.592deg) translate(-50%, -50%);
+    }
+    25% {
+        scale: 0.93;
+        transform: rotate(13.592deg) translate(-50%, -50%);
+    }
+    50% {
+        scale: 1.03;
+        transform: rotate(10.592deg) translate(-50%, -50%);
+    }
+    75% {
+        scale: 0.96;
+        transform: rotate(12.592deg) translate(-50%, -50%);
+    }
+    100%{
+        scale: 1;
+        transform: rotate(11.592deg) translate(-50%, -50%);
+    }
+}
+@keyframes smallstar {
+    0% {
+        scale: 0.93;
+        transform: rotate(66.635deg) translate(-50%, -50%);
+    }
+    25% {
+        scale: 1;
+        transform: rotate(68.635deg) translate(-50%, -50%);
+    }
+    50% {
+        scale: 0.98;
+        transform: rotate(63.635deg) translate(-50%, -50%);
+    }
+    75% {
+        scale: 1;
+        transform: rotate(67.635deg) translate(-50%, -50%);
+    }
+    100%{
+        scale: 0.93;
+        transform: rotate(66.635deg) translate(-50%, -50%);
+    }
 }

@@ -32,8 +32,8 @@ export default function({ users }: LeaderboardProps){
                                     >
                                     <div className="w-[2%]">{index + 1}.</div>
 
-                                    <div className="w-[38%] flex gap-[16px] items-center">
-                                        <Image className="rounded-full w-[40px] h-[40px] object-cover border border-[#ffffff71]" src={user.profile_image || "/chromestars-avi.png"} width="36" height="36" alt="" />
+                                    <div className="group w-[38%] flex gap-[16px] items-center">
+                                        <Image className="rounded-full w-[40px] h-[40px] object-cover group-hover:border group-hover:border-[#ffffff71]" src={user.profile_image || "/chromestars-avi.png"} width="36" height="36" alt="" />
                                         {/*<Image className="" src={user.profile_image || "/chromestars-avi.png"} width="36" height="36" alt="" />*/}
                                         <p className="font-bold">{user.username}</p>
                                     </div>
