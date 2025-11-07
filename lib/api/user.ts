@@ -33,7 +33,6 @@ export async function getMe(token?: string) {
   if (!token) {
     throw new Error("No authentication token found")
   }
-  console.log('Token found:', token)
   
   const res = await fetch(`${API_BASE}/users/me`, {
     method: 'GET',
@@ -43,11 +42,32 @@ export async function getMe(token?: string) {
   })
 
   if (!res.ok) {
+    window.location.href = '/'
     const errorData = await res.json()
     throw new Error(errorData.message || "Unknown server error")
   }
 
   const data = await res.json()
 
+  return data.user
+}
+
+export async function updateMe(token: string, updatedData: Partial<User>) {
+  const res = await fetch(`${API_BASE}/users/update-me`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(updatedData)
+  })
+
+  if (!res.ok) {
+    const errorData = await res.json()
+    throw new Error(errorData.message || "Unknown server error")
+  }
+
+  const data = await res.json()
+  
   return data.user
 }

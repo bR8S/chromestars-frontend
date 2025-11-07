@@ -11,8 +11,8 @@ export async function getEvents() {
         const errorData = await res.json();
         throw new Error(errorData.message || "Unknown server error");
     }
+    
     const data = await res.json()
-    console.log('events: ' + data.events)
 
     return data.events
 }

@@ -5,7 +5,6 @@ import Leaderboard from "./components/Leaderboard"
 
 export default async function Home() {
   const users: User[] = await userApi.getUsers()
-  console.log('Log in component' + users)
 
   return (
     <div className="px-8 py-8">

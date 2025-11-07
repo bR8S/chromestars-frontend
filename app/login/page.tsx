@@ -10,7 +10,7 @@ export default function(){
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         try {
             event.preventDefault()
-            console.log('Submitting login form')
+
             const res = await fetch(action, {
                 method: 'POST',
                 headers: {
@@ -23,7 +23,6 @@ export default function(){
 
             if (res.ok) {
                 // Login successful, redirect or show success message
-                console.log('Login successful')
                 localStorage.setItem("token", data.token)
                 window.location.href = '/'
             } else {
@@ -36,7 +35,7 @@ export default function(){
     }
 
     return (
-        <div className="px-8 py-8 flex flex-col max-w-xl gap-4 mt-20 mx-auto border border-[#ffffff38] bg-[#ffffff0c] rounded-md">
+        <div className="px-8 py-8 flex flex-col max-w-xl gap-4 mt-20 mx-auto border border-[#ffffff38] bg-[#ffffff0c] rounded-md backdrop-blur-lg">
             <h1 className="text-3xl font-bold mb-4 text-center">LOGIN</h1>
             <form className="" onSubmit={handleSubmit} method="POST">
                 <div className="flex flex-col gap-4 mb-8">
