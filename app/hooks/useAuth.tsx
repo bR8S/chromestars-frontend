@@ -11,3 +11,15 @@ export function useAuth() {
 
   return { isSignedIn, setIsSignedIn }
 }
+
+export function adminAuth(){
+    const [isAdmin, setIsAdmin] = useState(false)
+    
+    useEffect(() => {
+      console.log('admin perms? : ' + localStorage.getItem("admin"))
+      const isAdmin = localStorage.getItem("admin")
+      setIsAdmin(!!isAdmin)
+    }, [])
+
+    return { isAdmin, setIsAdmin }
+}

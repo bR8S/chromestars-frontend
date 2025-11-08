@@ -24,6 +24,8 @@ export default function(){
             if (res.ok) {
                 // Login successful, redirect or show success message
                 localStorage.setItem("token", data.token)
+                localStorage.setItem("admin", data.user.admin)
+
                 window.location.href = '/'
             } else {
                 // Handle errors
@@ -39,8 +41,14 @@ export default function(){
             <h1 className="text-3xl font-bold mb-4 text-center">LOGIN</h1>
             <form className="" onSubmit={handleSubmit} method="POST">
                 <div className="flex flex-col gap-4 mb-8">
-                    <input type="email" id="email" name="email" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="true" required />
-                    <input type="password" id="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <div className="form-group">
+                        <label>Email address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email address" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="true" required />
+                    </div>
+                    <div className="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    </div>
                     <div className="relative flex justify-end">
                         <a className="text-[14px] underline" href="/forgot-password">Forgot password?</a>
                     </div>

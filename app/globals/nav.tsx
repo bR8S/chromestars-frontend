@@ -1,9 +1,10 @@
 'use client'
 import Image from "next/image"
-import { useAuth } from "../hooks/useAuth"
+import { useAuth, adminAuth } from "../hooks/useAuth"
 
 export default function(){
     const { isSignedIn } = useAuth()
+    const { isAdmin } = adminAuth()
 
     return (
         <> 
@@ -13,7 +14,7 @@ export default function(){
                         <Image className="absolute top-[14px]" src="/chromestars-triple-star.png" height="36" width="320" alt="Chromestars logo" />
                     </a>
                     <div className="flex items-center gap-2">
-                        {isSignedIn && 
+                        {isAdmin && 
                             <a className="px-4 py-6 font-bold" href="/admin">ADMIN</a>
                         }
                         <a className="px-4 py-6 font-bold" href="/events">EVENTS</a>

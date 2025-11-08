@@ -210,3 +210,36 @@ h4 {
         transform: rotate(66.635deg) translate(-50%, -50%);
     }
 }
+
+.intro-homescreen-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: radial-gradient(ellipse farthest-corner at -40% 45%, rgb(59 59 59 / 85%), hsl(242deg 10.48% 30.78%), rgb(35 35 35 / 93%)), linear-gradient(97deg, rgb(64 73 193 / 90%) 0%, rgb(10 15 35 / 90%) 5%);
+}
+.intro-homescreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(14px) grayscale(0.1);
+}
+.homescreen-leaderboard {
+    padding: 20px 32px;
+}
+.intro-homescreen-bg {
+    background: url('/cinematic.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    filter: blur(6px);
+}
