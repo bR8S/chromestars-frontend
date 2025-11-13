@@ -6,13 +6,10 @@ export default async function({ params }: any){
     const { username } = await params
     const user: User = await userApi.getUser(username)
 
-    const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
-    const bgImgSrc = `${API_BASE}/file/${user.background_image?.split("/").pop()}` // extract filename
-
-    const profileImgSrc = user.profile_image
-    ? `${API_BASE}/file/${user.profile_image.split("/").pop()}` // extract filename
-    : "/chromestars-avi.png";
+    const profileImgSrc = `${BASE_URL}/file/${user.profile_image}`
+    const bgImgSrc = `${BASE_URL}/file/${user.background_image}`
 
     return (
         <>

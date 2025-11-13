@@ -9,9 +9,9 @@ export default function(){
     return (
         <> 
             <header>
-                <nav className="flex items-center justify-between px-8">
-                    <a href="/">
-                        <Image className="absolute top-[14px]" src="/chromestars-triple-star.png" height="36" width="320" alt="Chromestars logo" />
+                <nav className="flex height-[60px] items-center justify-between px-8">
+                    <a className="" href="/">
+                        <Image className="relative" src="/chromestars-star.png" alt="Chromestars logo" width="55" height="35" />
                     </a>
                     <div className="flex items-center gap-2">
                         {isAdmin && 
@@ -22,7 +22,7 @@ export default function(){
                         <a className="px-4 py-6 font-bold" href="/">LEADERBOARD</a>
                         <div className="px-4 py-6 font-bold">SEARCH</div>
                         <a href="/account" className="pl-4">
-                            <Image src="/chromestars-badge-account.png" height="40" width="40" alt="Account page logo" />
+                            <Image src="/chromestars-badge-account.png" height="48" width="48" alt="Account page logo" />
                         </a>
                     </div>
                 </nav>

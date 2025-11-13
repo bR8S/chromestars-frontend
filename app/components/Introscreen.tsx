@@ -1,10 +1,11 @@
-import Image from "next/image";
+import Image from "next/image"
+import { useState } from "react"
 
-export default function(){
-    const handleEnter = () => {
-        window.location.href = '/register';
-    }
+interface IntroscreenProps {
+    onEnter: () => void;
+}
 
+export default function({ onEnter }: IntroscreenProps){
     return (
         <div className="intro-homescreen-wrapper">
             <div className="intro-homescreen z-0">
@@ -23,7 +24,7 @@ export default function(){
                     <br /><br />
                     Do you have what it takes to rule the streets? <b>The crown is waiting.</b>
                 </p>
-                <div className="button !w-[250px]" onClick={handleEnter}>ENTER</div>
+                <div className="button !w-[250px]" onClick={onEnter}>ENTER</div>
             </div>
         </div>
     )
